@@ -10,8 +10,8 @@
           (input)="onInput($event.target.value)"
         />
       </div>
-      <div class="box has-text-centered">
-        <h1 class="title">You win!</h1>
+      <div *ngIf="enteredText === randomText" class="box has-text-centered">
+        <h1 class="title">{{ gameOverText }}</h1>
       </div>
     </div>
   </div>
