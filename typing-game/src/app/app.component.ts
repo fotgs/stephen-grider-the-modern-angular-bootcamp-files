@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "typing-game";
   userInput = "";
+  randomWord = "";
 
   onChangeEvent(value: string) {
     this.userInput = value;
