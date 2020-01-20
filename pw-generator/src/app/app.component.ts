@@ -30,7 +30,6 @@ export class AppComponent {
     if (this.includeSymbols) {
       validChars += symbols;
     }
-    console.log(validChars);
 
     let generatedPassword = "";
     for (let i = 0; i < this.length; i++) {
