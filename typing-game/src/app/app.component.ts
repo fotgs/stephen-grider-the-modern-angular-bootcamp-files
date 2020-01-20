@@ -16,13 +16,8 @@ export class AppComponent {
 
   compare(randomChar: string, enteredChar: string) {
     if (!enteredChar) {
-      return "black";
+      return "pending";
     }
-
-    if (randomChar === enteredChar) {
-      return "green";
-    } else {
-      return "red";
-    }
+    return randomChar === enteredChar ? "correct" : "incorrect";
   }
 }

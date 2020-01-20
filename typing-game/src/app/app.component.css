@@ -1,11 +1,11 @@
-.green {
+.correct {
   color: greenyellow;
 }
 
-.red {
+.incorrect {
   color: orangered;
 }
 
-.black {
+.pending {
   color: black;
 }
