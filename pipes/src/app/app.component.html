@@ -15,4 +15,21 @@
       <div>{{ name | titlecase }}</div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input
+        type="date"
+        class="form-control"
+        (input)="onDateChange($event.target.value)"
+        type="text"
+      />
+    </div>
+
+    <div class="col">
+      <label><b>Payment Date</b></label>
+      <div>{{ date | titlecase }}</div>
+    </div>
+  </div>
 </div>
