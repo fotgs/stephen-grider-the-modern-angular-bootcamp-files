@@ -10,7 +10,7 @@ export class AppComponent {
   userInput = "";
   randomText = lorem.sentence();
 
-  onChangeEvent(value: string) {
+  onInput(value: string) {
     this.userInput = value;
   }
 }
