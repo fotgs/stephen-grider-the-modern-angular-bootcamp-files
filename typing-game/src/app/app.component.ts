@@ -7,11 +7,22 @@ import { lorem } from "faker";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  gameOverText = "Success!";
   enteredText = "";
   randomText = lorem.sentence();
 
   onInput(value: string) {
     this.enteredText = value;
+  }
+
+  compare(randomChar: string, enteredChar: string) {
+    if (!enteredChar) {
+      return "black";
+    }
+
+    if (randomChar === enteredChar) {
+      return "green";
+    } else {
+      return "red";
+    }
   }
 }
