@@ -2,3 +2,5 @@
   <label>Payee Name</label>
   <input (input)="onNameChange($event.target.value)" type="text" />
 </div>
+
+{{ name | titlecase }}
