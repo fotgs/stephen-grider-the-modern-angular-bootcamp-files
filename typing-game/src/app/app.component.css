@@ -4,6 +4,7 @@
 
 .incorrect {
   color: orangered;
+  font-weight: bold;
 }
 
 .pending {
