@@ -29,7 +29,7 @@
 
     <div class="col">
       <label><b>Payment Date</b></label>
-      <div>{{ date | titlecase }}</div>
+      <div>{{ date | date: "fullDate" }}</div>
     </div>
   </div>
 </div>
