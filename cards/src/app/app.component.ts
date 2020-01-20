@@ -18,7 +18,7 @@ export class AppComponent {
     {
       title: "Snowy Mountain",
       imageUrl: "assets/mountain.jpeg",
-      username: "mountainlover",
+      username: "mountainlover", 
       content: "Here is a picture of a snowy mountain."
     },
     {
