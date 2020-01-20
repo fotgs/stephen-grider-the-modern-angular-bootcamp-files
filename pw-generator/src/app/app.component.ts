@@ -13,12 +13,32 @@ export class AppComponent {
   includeSymbols = false;
 
   onButtonClick() {
-    this.password = "new password";
-    console.log(`
-    Include Letters: ${this.includeLetters};
-    Include Numbers: ${this.includeNumbers};
-    Include Symbols: ${this.includeSymbols};
-    `);
+    const numbers = "1234567890";
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const symbols = "!@#$%^&*()";
+
+    let validChars = "";
+
+    if (this.includeLetters) {
+      validChars += letters;
+    }
+
+    if (this.includeNumbers) {
+      validChars += numbers;
+    }
+
+    if (this.includeSymbols) {
+      validChars += symbols;
+    }
+    console.log(validChars);
+
+    let generatedPassword = "";
+    for (let i = 0; i < this.length; i++) {
+      let randomIdx = Math.floor(Math.random() * validChars.length);
+      generatedPassword += validChars[randomIdx];
+    }
+
+    this.password = generatedPassword;
   }
 
   onChangeUseLetters() {
