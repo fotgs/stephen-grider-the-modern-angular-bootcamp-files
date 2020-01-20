@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { lorem } from "faker";
 
 @Component({
   selector: "app-root",
@@ -14,14 +15,9 @@ export class AppComponent {
     "The happy alcohol colors the mechanism."
   ];
   userInput = "";
-  randomSentence = this.getRandomSentence();
-
+  randomSentence = lorem.sentence();
+  
   onChangeEvent(value: string) {
     this.userInput = value;
-  }
-
-  getRandomSentence() {
-    let randomIdx = Math.floor(Math.random() * this.sentences.length);
-    return this.sentences[randomIdx];
   }
 }
