@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  currentPage = 2;
+  currentPage = 3;
   images = [
     {
       title: "At the beach",
