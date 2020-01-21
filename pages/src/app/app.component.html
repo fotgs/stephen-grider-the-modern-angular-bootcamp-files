@@ -8,9 +8,12 @@
     <!-- pages -->
     <ng-container *ngFor="let image of images; let i = index">
       <li class="page-item" [ngClass]="{ active: i === currentPage }">
-        <a *ngIf="checkWindowIndex(i)" (click)="currentPage = i" class="page-link">{{
-          i + 1
-        }}</a>
+        <a
+          *ngIf="checkWindowIndex(i)"
+          (click)="currentPage = i"
+          class="page-link"
+          >{{ i + 1 }}</a
+        >
       </li>
     </ng-container>
 
@@ -24,7 +27,25 @@
   </ul>
 </nav>
 
-<div>
+<!-- <div>
   <h4>{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url" [alt]="images[currentPage].title" />
+</div> -->
+
+<div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">
+    Current page is 0
+  </div>
+  <div *ngSwitchCase="1">
+    Current page is 1
+  </div>
+  <div *ngSwitchCase="2">
+    Current page is 2
+  </div>
+  <div *ngSwitchCase="3">
+    Current page is 3
+  </div>
+  <div *ngSwitchDefault>
+    Error
+  </div>
 </div>
