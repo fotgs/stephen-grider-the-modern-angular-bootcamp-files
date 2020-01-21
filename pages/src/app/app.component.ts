@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  currentPage = 3;
+  currentPage = 0;
   images = [
     {
       title: "At the beach",
@@ -29,16 +29,4 @@ export class AppComponent {
         "https://images.unsplash.com/photo-1542181961-9590d0c79dab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
     }
   ];
-
-  handleNextBtn() {
-    if (this.currentPage < this.images.length) {
-      this.currentPage++;
-    }
-  }
-
-  handlePrevBtn() {
-    if (this.currentPage > 0) {
-      this.currentPage--;
-    }
-  }
 }
