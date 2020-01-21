@@ -8,7 +8,7 @@
     <!-- pages -->
     <ng-container *ngFor="let image of images; let i = index">
       <li class="page-item" [ngClass]="{ active: i === currentPage }">
-        <a *ngIf="i < 5" (click)="currentPage = i" class="page-link">{{
+        <a *ngIf="checkWindowIndex(i)" (click)="currentPage = i" class="page-link">{{
           i + 1
         }}</a>
       </li>
