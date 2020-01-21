@@ -11,6 +11,12 @@ export class AppComponent {
   amount: number;
   height: number;
 
+  car = {
+    make: "Honda",
+    color: "White",
+    year: 2020
+  };
+
   onHeightChange(value: string) {
     this.height = parseFloat(value);
   }
