@@ -32,4 +32,20 @@
       <div>{{ date | date: "fullDate" }}</div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Paymount Amount</label>
+      <input
+        type="text"
+        class="form-control"
+        (input)="onAmountChange($event.target.value)"
+      />
+    </div>
+
+    <div class="col">
+      <label><b>Paymount Amount</b></label>
+      <div>{{ amount | currency }}</div>
+    </div>
+  </div>
 </div>
