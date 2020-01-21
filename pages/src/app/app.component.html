@@ -6,7 +6,7 @@
     </li>
 
     <!-- pages -->
-    <ng-container *ngFor="let image of images; let i = index">
+    <ng-container *appTimes="images.length; let i = index">
       <li class="page-item" [appClass]="{ active: i === currentPage }">
         <a
           *ngIf="checkWindowIndex(i)"
