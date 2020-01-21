@@ -1,13 +1,13 @@
 <nav>
   <ul class="pagination">
     <!-- prev button -->
-    <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
+    <li class="page-item" [appClass]="{ disabled: currentPage === 0 }">
       <a (click)="currentPage = currentPage - 1" class="page-link">Prev</a>
     </li>
 
     <!-- pages -->
     <ng-container *ngFor="let image of images; let i = index">
-      <li class="page-item" [ngClass]="{ active: i === currentPage }">
+      <li class="page-item" [appClass]="{ active: i === currentPage }">
         <a
           *ngIf="checkWindowIndex(i)"
           (click)="currentPage = i"

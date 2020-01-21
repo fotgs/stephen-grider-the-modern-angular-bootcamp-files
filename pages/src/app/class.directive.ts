@@ -7,9 +7,7 @@ export class ClassDirective {
   constructor(private element: ElementRef) {}
 
   @Input("appClass") set classNames(classObj: any) {
-    console.log(classObj);
-
-    for (let c of classObj) {
+    for (let c in classObj) {
       if (classObj[c]) {
         this.element.nativeElement.classList.add(c);
       } else {
