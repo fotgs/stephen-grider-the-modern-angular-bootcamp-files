@@ -48,4 +48,20 @@
       <div>{{ amount | currency: "JPY" }}</div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Height</label>
+      <input
+        type="text"
+        class="form-control"
+        (input)="onHeightChange($event.target.value)"
+      />
+    </div>
+
+    <div class="col">
+      <label><b>Height</b></label>
+      <div>{{ height | number: "1.1-1" }}</div>
+    </div>
+  </div>
 </div>
