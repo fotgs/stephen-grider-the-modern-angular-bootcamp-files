@@ -1,10 +1,7 @@
 <div class="ui placeholder segment">
   <div class="ui icon header">
-    <i class="search icon"></i>
-    <ng-content></ng-content>
+    <ng-content select="header"></ng-content>
   </div>
-  <div class="inline">
-    <div class="ui primary button">Clear Query</div>
-    <div class="ui button">Add Document</div>
-  </div>
+  <ng-content></ng-content>
 </div>
+ 
