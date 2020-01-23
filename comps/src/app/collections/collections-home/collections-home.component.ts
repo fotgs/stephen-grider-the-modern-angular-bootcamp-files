@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-collections-home',
-  templateUrl: './collections-home.component.html',
-  styleUrls: ['./collections-home.component.css']
+  selector: "app-collections-home",
+  templateUrl: "./collections-home.component.html",
+  styleUrls: ["./collections-home.component.css"]
 })
 export class CollectionsHomeComponent implements OnInit {
+  data = [
+    { name: "James", age: 24, job: "Designer" },
+    { name: "Alex", age: 28, job: "Frontend Engineer" },
+    { name: "Sara", age: 32, job: "Backend Engineer" }
+  ];
 
-  constructor() { }
+  headers = [
+    { key: "name", label: "Name" },
+    { key: "age", label: "Age" },
+    { key: "job", label: "Job" }
+  ];
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }
