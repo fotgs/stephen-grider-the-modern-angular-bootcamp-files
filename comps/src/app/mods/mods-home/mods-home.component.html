@@ -1,3 +1,6 @@
 <app-divider>Modal</app-divider>
-<app-modal></app-modal>
+<app-modal *ngIf="openModal"></app-modal>
+<button (click)="onClick()" class="ui button">
+  Show Modal
+</button>
 <!-- <app-divider>Accordion</app-divider> -->

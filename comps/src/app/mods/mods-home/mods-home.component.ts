@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-mods-home',
-  templateUrl: './mods-home.component.html',
-  styleUrls: ['./mods-home.component.css']
+  selector: "app-mods-home",
+  templateUrl: "./mods-home.component.html",
+  styleUrls: ["./mods-home.component.css"]
 })
 export class ModsHomeComponent implements OnInit {
+  openModal = false;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onClick() {
+    this.openModal = !this.openModal;
   }
-
 }

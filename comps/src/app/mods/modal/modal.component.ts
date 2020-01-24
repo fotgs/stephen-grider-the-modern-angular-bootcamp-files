@@ -15,10 +15,4 @@ export class ModalComponent implements OnInit {
   ngOnDestroy() {
     this.element.nativeElement.remove();
   }
-
-  openModal() {
-    let modal = document.querySelector(".modal");
-
-    modal.classList.add("active");
-  }
 }
