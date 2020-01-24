@@ -1,6 +1,6 @@
-<div class="ui dimmer visible active">
+<div (click)="onCloseClick()" class="ui dimmer visible active">
   <div class="ui modal visible active">
-    <i class="close icon"></i>
+    <i (click)="onCloseClick()" class="close icon"></i>
     <div class="header">
       Profile Picture
     </div>
@@ -22,7 +22,10 @@
       <div class="ui black deny button">
         Nope
       </div>
-      <div class="ui positive right labeled icon button">
+      <div
+        (click)="onCloseClick()"
+        class="ui positive right labeled icon button"
+      >
         Yep, that's me
         <i class="checkmark icon"></i>
       </div>

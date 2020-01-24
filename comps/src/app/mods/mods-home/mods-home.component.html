@@ -1,5 +1,5 @@
 <app-divider>Modal</app-divider>
-<app-modal *ngIf="openModal"></app-modal>
+<app-modal (close)="onClick()" *ngIf="openModal"></app-modal>
 <button (click)="onClick()" class="ui button">
   Show Modal
 </button>
