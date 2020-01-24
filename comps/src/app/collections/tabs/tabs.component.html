@@ -1,19 +1,7 @@
 <div class="ui grid">
   <div class="four wide column">
     <div class="ui vertical fluid tabular menu">
-      <a
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="item"
-        routerLinkActive="active"
-        routerLink="./"
-        >Biography</a
-      >
-      <a class="item" routerLinkActive="active" routerLink="./companies"
-        >Companies</a
-      >
-      <a class="item" routerLinkActive="active" routerLink="./partners"
-        >Partners</a
-      >
+      <ng-content></ng-content>
     </div>
   </div>
   <div class="twelve wide stretched column">
