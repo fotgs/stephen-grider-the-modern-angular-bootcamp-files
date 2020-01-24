@@ -2,33 +2,15 @@
   <div (click)="$event.stopPropagation()" class="ui modal visible active">
     <i (click)="onCloseClick()" class="close icon"></i>
     <div class="header">
-      Profile Picture
+      MODAL!
     </div>
-    <div class="image content">
-      <div class="ui medium image">
-        <img />
-      </div>
-      <div class="description">
-        <div class="ui header">We've auto-chosen a profile image for you.</div>
-        <p>
-          We've grabbed the following image from the
-          <a href="https://www.gravatar.com" target="_blank">gravatar</a> image
-          associated with your registered e-mail address.
-        </p>
-        <p>Is it okay to use this photo?</p>
-      </div>
+    <div class="content">
+      <p>
+        Some content for the modal window should go right here!
+      </p>
     </div>
     <div class="actions">
-      <div class="ui black deny button">
-        Nope
-      </div>
-      <div
-        (click)="onCloseClick()"
-        class="ui positive right labeled icon button"
-      >
-        Yep, that's me
-        <i class="checkmark icon"></i>
-      </div>
+      <button (click)="onCloseClick()" class="ui button">OK</button>
     </div>
   </div>
 </div>
