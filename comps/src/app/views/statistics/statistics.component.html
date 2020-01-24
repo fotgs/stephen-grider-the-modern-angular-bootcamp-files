@@ -2,13 +2,13 @@
   Statistics
 </app-divider>
 
-<span>
-  <h1>{{ stats.favorites }}</h1>
-  <h4>Favorites</h4>
-
-  <h1>{{ stats.pageViews }}</h1>
-  <h4>Page Views</h4>
-
-  <h1>{{ stats.users }}</h1>
-  <h4>Users</h4>
-</span>
+<div class="ui statistics">
+  <div *ngFor="let header of headers" class="statistic">
+    <div class="value">
+      {{ stats[header.key] }}
+    </div>
+    <div class="label">
+      {{ header.label }}
+    </div>
+  </div>
+</div>

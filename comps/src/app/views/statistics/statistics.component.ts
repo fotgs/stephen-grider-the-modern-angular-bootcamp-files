@@ -12,6 +12,8 @@ export class StatisticsComponent implements OnInit {
     users: 0
   };
 
+  @Input() headers = [];
+
   constructor() {}
 
   ngOnInit() {}

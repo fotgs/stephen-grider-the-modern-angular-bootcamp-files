@@ -11,6 +11,12 @@ export class ViewsHomeComponent implements OnInit {
     pageViews: 967,
     users: 30
   };
+
+  headers = [
+    { key: "favorites", label: "Favorites" },
+    { key: "pageViews", label: "Page Views" },
+    { key: "users", label: "Users" }
+  ];
   constructor() {}
 
   ngOnInit() {}
