@@ -1,13 +1,12 @@
-<app-divider>Items List</app-divider>
-<div class="ui unstackable items">
+<div class="ui items">
   <div *ngFor="let item of items" class="item">
     <div class="image">
-      <img src="{{ item.imgUrl }}" />
+      <img src="{{ item.image }}" />
     </div>
     <div class="content">
       <a class="header"></a>
       <div class="meta">
-        <span>{{ item.name }}</span>
+        <span>{{ item.title }}</span>
       </div>
       <div class="description">
         <p></p>

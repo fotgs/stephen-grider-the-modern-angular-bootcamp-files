@@ -6,31 +6,25 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./views-home.component.css"]
 })
 export class ViewsHomeComponent implements OnInit {
-  stats = {
-    favorites: 22,
-    pageViews: 967,
-    users: 30
-  };
-
-  headers = [
-    { key: "favorites", label: "Favorites" },
-    { key: "pageViews", label: "Page Views" },
-    { key: "users", label: "Users" }
+  stats = [
+    { label: "Favorites", value: 22 },
+    { label: "Page Views", value: 967 },
+    { label: "Users", value: 30 }
   ];
 
   items = [
     {
-      name: "Couch",
+      title: "Couch",
       description:
         "This is a great couch, the kind that you would want in your house!",
-      imgUrl:
+      image:
         "https://s7d3.scene7.com/is/image/ArtVanFurniture/CONDO-BOL-1528BL-7105-SF?$PDPTILEDESKTOP$"
     },
     {
-      name: "Dresser",
+      title: "Dresser",
       description:
         "This is a great dresser, the kind that you would want in your house!",
-      imgUrl:
+      image:
         "https://www.ikea.com/us/en/images/products/hemnes-chest-of-8-drawers__0627346_PE693299_S5.JPG?f=s"
     }
   ];

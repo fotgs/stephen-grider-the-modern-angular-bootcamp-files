@@ -1,14 +1,10 @@
-<app-divider>
-  Statistics
-</app-divider>
-
 <div class="ui statistics">
-  <div *ngFor="let header of headers" class="statistic">
+  <div *ngFor="let stat of stats" class="statistic">
     <div class="value">
-      {{ stats[header.key] }}
+      {{ stat.value }}
     </div>
     <div class="label">
-      {{ header.label }}
+      {{ stat.label }}
     </div>
   </div>
 </div>
