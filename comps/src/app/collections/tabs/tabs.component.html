@@ -1,0 +1,24 @@
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="item"
+        routerLinkActive="active"
+        routerLink="./"
+        >Biography</a
+      >
+      <a class="item" routerLinkActive="active" routerLink="./companies"
+        >Companies</a
+      >
+      <a class="item" routerLinkActive="active" routerLink="./partners"
+        >Partners</a
+      >
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
