@@ -97,4 +97,24 @@ class Car2 {
 }
 
 // DECORATORS - currently experimental, not 100% supported by default
-// need to create a config file using a special CLI
+// need to create a config file using CLI
+// functions that ONLY get called when the file first executes
+// can be applied to a class, property, method, accessor, agruments
+// used to test the inner workings of classes
+
+// plain decorator
+const Component = (target: any) => {
+  console.log(target);
+};
+
+// factory decorators must return a function and be called with parenthesis
+
+@Component
+class Car3 {
+  @Component year: string;
+
+  @Component
+  drive(@Component speed: number) {
+    console.log("Drive");
+  }
+}
