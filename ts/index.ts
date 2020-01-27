@@ -120,3 +120,24 @@ class Car3 {
     console.log("Drive");
   }
 }
+
+interface Driveable {
+  speed: number;
+  drive(): string;
+}
+
+class Car implements Driveable {
+  speed = 10;
+
+  drive() {
+    return `${this.speed}`;
+  }
+}
+
+const myCar2 = new Car();
+
+const startDriving = (vehicle: Driveable) => {
+  vehicle.drive();
+};
+
+startDriving(myCar2);
