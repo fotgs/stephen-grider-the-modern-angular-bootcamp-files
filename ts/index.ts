@@ -141,3 +141,12 @@ const startDriving = (vehicle: Driveable) => {
 };
 
 startDriving(myCar2);
+
+// GENERIC CLASSES - reduce the # of times you write classes
+
+class NumberHolder<TypeForValueProperty> {
+  value: TypeForValueProperty;
+}
+
+const numberHolder = new NumberHolder<number>();
+numberHolder.value = 10;
