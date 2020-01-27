@@ -29,6 +29,21 @@ const post: { a: number; b: string; c: boolean } = {
   c: false
 };
 
-const printPost = (post): { a: number; b: string; c: boolean } => {
+// long way to describe object type
+const printPost1 = (post: { a: number; b: string; c: boolean }) => {
   return post;
 };
+
+// interface - creates a custom type
+
+interface Post {
+  a: number;
+  b: string;
+  c: boolean;
+}
+
+// use interface
+const printPost2 = (post: Post) => {
+  return post;
+};
+
