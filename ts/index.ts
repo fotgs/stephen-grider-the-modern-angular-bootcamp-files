@@ -152,3 +152,16 @@ const numberHolder1 = new NumberHolder<number>();
 const numberHolder2 = new NumberHolder<string>();
 numberHolder1.value = 10;
 numberHolder2.value = "10";
+
+// GENERIC FUNCTIONS
+
+const numberWrapper = (value: number): number[] => {
+  return [value];
+};
+
+const valueWrapper = <T>(value: T): T[] => {
+  return [value];
+};
+
+valueWrapper<number>(10);
+valueWrapper<string>("10");
