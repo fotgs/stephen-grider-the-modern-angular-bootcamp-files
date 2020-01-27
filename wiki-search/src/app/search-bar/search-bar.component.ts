@@ -10,7 +10,7 @@ export class SearchBarComponent implements OnInit {
 
   constructor() {}
 
-  onFormSubmit(e) {
+  onFormSubmit(e: any) {
     e.preventDefault();
     console.log(this.term);
     this.term = "";
