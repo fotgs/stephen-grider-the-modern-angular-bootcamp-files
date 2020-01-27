@@ -10,10 +10,5 @@ export class SearchBarComponent implements OnInit {
 
   constructor() {}
 
-  onInput(value: string) {
-    this.term = value;
-    console.log(this.term);
-  }
-
   ngOnInit() {}
 }
