@@ -72,7 +72,7 @@ class Car1 {
   }
 }
 
-const myCar = new Car("red", 2000);
+const myCar = new Car1("red", 2000);
 myCar.drive();
 
 // private and public (can be accessed outside of the class)
@@ -97,4 +97,4 @@ class Car2 {
 }
 
 // DECORATORS - currently experimental, not 100% supported by default
-// need to create a config file using a special CLI 
+// need to create a config file using a special CLI
