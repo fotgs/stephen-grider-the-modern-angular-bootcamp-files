@@ -1,3 +1,5 @@
+import { Car4 } from "./Car";
+
 // Typescript ONLY helps you catch errors during development.
 
 // TYPE ANNOTATION - 6 types
