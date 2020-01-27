@@ -1,6 +1,6 @@
 // Typescript ONLY helps you catch errors during development.
 
-// type annotation - 6 types
+// TYPE ANNOTATION - 6 types
 const myName: string = "Annie";
 
 const ten: number = 10;
@@ -13,7 +13,7 @@ const isUndefined: undefined = undefined;
 const isBool: boolean = false;
 const isAny: any = true;
 
-// type inference - only works when a variable is declared AND initialized
+// TYPE INFERENCE - only works when a variable is declared AND initialized
 
 // functions
 const add = (a: number, b: number): number => {
@@ -36,7 +36,7 @@ const printPost1 = (post: { a: number; b: string; c: boolean }) => {
   return post;
 };
 
-// interface - creates a custom type
+// INTERFACE - creates a custom type
 
 interface Post {
   a: number;
@@ -48,3 +48,5 @@ interface Post {
 const printPost2 = (post: Post) => {
   return post;
 };
+
+// CLASSES
