@@ -50,7 +50,7 @@ const printPost2 = (post: Post) => {
 };
 
 // CLASSES
-class Car {
+class Car1 {
   //   color = "red";
   //   year = 2000;
 
@@ -74,3 +74,21 @@ class Car {
 
 const myCar = new Car("red", 2000);
 myCar.drive();
+
+// private and public (can be accessed outside of the class)
+class Car2 {
+  color: string;
+  private year: number;
+
+  constructor(color: string, year: number) {}
+
+  drive() {
+    console.log(this.year);
+    console.log("Vroom");
+  }
+
+  private turnWheel() {
+    console.log("Turn");
+    console.log("This method is not available outside.");
+  }
+}
