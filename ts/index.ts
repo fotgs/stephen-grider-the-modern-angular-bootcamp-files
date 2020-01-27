@@ -77,10 +77,13 @@ myCar.drive();
 
 // private and public (can be accessed outside of the class)
 class Car2 {
-  color: string;
-  private year: number;
+  //   color: string;
+  //   private year: number;
 
-  constructor(color: string, year: number) {}
+  constructor(color: string, private year: number) {
+    // this.color = color;
+    // this.year = year;
+  }
 
   drive() {
     console.log(this.year);
