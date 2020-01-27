@@ -144,9 +144,11 @@ startDriving(myCar2);
 
 // GENERIC CLASSES - reduce the # of times you write classes
 
-class NumberHolder<TypeForValueProperty> {
-  value: TypeForValueProperty;
+class NumberHolder<T> {
+  value: T;
 }
 
-const numberHolder = new NumberHolder<number>();
-numberHolder.value = 10;
+const numberHolder1 = new NumberHolder<number>();
+const numberHolder2 = new NumberHolder<string>();
+numberHolder1.value = 10;
+numberHolder2.value = "10";
