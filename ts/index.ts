@@ -1,3 +1,5 @@
+// Typescript ONLY helps you catch errors during development.
+
 // type annotation - 6 types
 const myName: string = "Annie";
 
@@ -46,4 +48,3 @@ interface Post {
 const printPost2 = (post: Post) => {
   return post;
 };
-
