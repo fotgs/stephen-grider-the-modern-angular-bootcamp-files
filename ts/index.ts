@@ -95,3 +95,6 @@ class Car2 {
     console.log("This method is not available outside.");
   }
 }
+
+// DECORATORS - currently experimental, not 100% supported by default
+// need to create a config file using a special CLI 
