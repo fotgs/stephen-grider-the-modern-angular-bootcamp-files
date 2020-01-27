@@ -1,4 +1,4 @@
-// type annotation
+// type annotation - 6 types
 const myName: string = "Annie";
 
 const ten: number = 10;
@@ -10,3 +10,5 @@ const isUndefined: undefined = undefined;
 
 const isBool: boolean = false;
 const isAny: any = true;
+
+// type inference - only works when a variable is declared AND initialized
