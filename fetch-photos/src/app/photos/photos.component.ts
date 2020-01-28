@@ -8,7 +8,9 @@ import { PhotosService } from "../photos.service";
 })
 export class PhotosComponent implements OnInit {
   photoUrl: string;
-  constructor(private photos: PhotosService) {}
+  constructor(private photos: PhotosService) {
+    this.getRandomPhoto();
+  }
 
   getRandomPhoto() {
     this.photos.fetchPhoto().subscribe(url => (this.photoUrl = url));
