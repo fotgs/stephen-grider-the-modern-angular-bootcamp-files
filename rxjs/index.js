@@ -50,3 +50,41 @@ observable.subscribe({
 
 // Need to add for this tool, but not in general use.
 observable;
+
+// low-level observables
+
+const { Observable } = Rx;
+
+const observable = new Observable(subscriber => {
+  // throw the value 1 into our pipeline
+  subscriber.next(1);
+
+  // observable is complete, no more values will come out
+  subscriber.complete();
+
+  // emit an error, no more values will come out
+  subscriber.error(new Error(""));
+});
+
+// ver 1
+observable.subscribe({
+  next(value) {
+    console.log(value);
+  },
+  complete() {
+    console.log("Observable is complete");
+  },
+
+  error(err) {
+    console.log(err.message);
+  }
+});
+
+observable;
+
+// ver 2
+observable.subscribe(
+  value => console.log(value), // next
+  err => console.log(err), // error
+  () => console.log("COMPLETE") // completion
+);
