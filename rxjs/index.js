@@ -19,7 +19,7 @@ const logValue = value => `This is your number: ${value}`;
 // RxJs
 
 const { fromEvent } = Rx;
-const { map } = RxOperators;
+const { map, pluck } = RxOperators;
 
 const input = document.createElement("input");
 const container = document.querySelector(".container");
@@ -28,8 +28,8 @@ container.appendChild(input);
 const observable = fromEvent(input, "input") // similar to adding addEventListener
   .pipe(
     // event flows through this pipeline created by chaining operators
-    map(event => event.target.value),
-    map(value => parse.int(value)),
+    pluck("target", "value"),
+    map(value => parseInt(value)),
     map(value => {
       if (isNaN(value)) {
         throw new Error("Enter a number!");
@@ -38,8 +38,8 @@ const observable = fromEvent(input, "input") // similar to adding addEventListen
     })
   );
 
-// argument passed into subscribe is the observer
 observable.subscribe({
+  // argument passed into subscribe is the observer
   next(value) {
     console.log(`Your value is ${value}`);
   },
