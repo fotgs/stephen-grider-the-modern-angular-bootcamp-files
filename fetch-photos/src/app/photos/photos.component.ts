@@ -7,7 +7,7 @@ import { PhotosService } from "../photos.service";
   styleUrls: ["./photos.component.css"]
 })
 export class PhotosComponent implements OnInit {
-  photoUrl = "";
+  photoUrl: string;
   constructor(private photos: PhotosService) {}
 
   getRandomPhoto() {
