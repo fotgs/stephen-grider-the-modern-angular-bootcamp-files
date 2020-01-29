@@ -1,0 +1,11 @@
+<input [formControl]="control" />
+<ng-container *ngIf="control.dirty && control.touched && control.errors">
+  <div *ngIf="control.errors.required">
+    Field is required
+  </div>
+  <div *ngIf="control.errors.minlength">
+    Length entered:
+    {{ control.errors.minlength.actualLength }} Required length:
+    {{ control.errors.minlength.requiredLength }}
+  </div>
+</ng-container>
