@@ -4,24 +4,31 @@
     [control]="cardForm.get('cardNumber')"
     [label]="'Card Number'"
   ></app-input>
-  <app-input
-    [control]="cardForm.get('expiration')"
-    [label]="'Expiration (MM/YY)'"
-  ></app-input>
-  <app-input
-    [control]="cardForm.get('securityCode')"
-    [label]="'Security Code'"
-  ></app-input>
-  <button class="button is-primary" [disabled]="cardForm.invalid" type="submit">
-    Submit
-  </button>
+  <div class="columns">
+    <div class="column">
+      <app-input
+        [control]="cardForm.get('expiration')"
+        [label]="'Expiration (MM/YY)'"
+      ></app-input>
+    </div>
+    <div class="column">
+      <app-input
+        [control]="cardForm.get('securityCode')"
+        [label]="'Security Code'"
+      ></app-input>
+    </div>
+  </div>
+  <div class="buttons">
+    <button
+      class="button is-primary"
+      [disabled]="cardForm.invalid"
+      type="submit"
+    >
+      Submit
+    </button>
 
-  <button class="button is-warning" (click)="onResetClick()" type="button">
-    Reset
-  </button>
+    <button class="button is-warning" (click)="onResetClick()" type="button">
+      Reset
+    </button>
+  </div>
 </form>
-<hr />
-<!-- debugging purposes -->
-<div>Form contents: {{ cardForm.value | json }}</div>
-<div>Form valid: {{ cardForm.valid | json }}</div>
-<div>Name Errors: {{ cardForm.get("name").errors | json }}</div>
