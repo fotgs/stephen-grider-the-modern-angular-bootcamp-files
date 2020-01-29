@@ -12,7 +12,9 @@
     [control]="cardForm.get('securityCode')"
     [label]="'Security Code'"
   ></app-input>
-  <button type="submit">Submit</button>
+  <button class="button is-primary" [disabled]="cardForm.invalid" type="submit">
+    Submit
+  </button>
 </form>
 <hr />
 <!-- debugging purposes -->
