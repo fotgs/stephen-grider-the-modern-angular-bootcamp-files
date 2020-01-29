@@ -33,5 +33,9 @@ export class CardFormComponent implements OnInit {
     console.log("submit");
   }
 
+  onResetClick() {
+    this.cardForm.reset();
+  }
+
   ngOnInit() {}
 }
